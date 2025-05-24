@@ -1,0 +1,542 @@
+[
+  {
+    "infinitive": "Arise",
+    "simple": "Arose",
+    "participle": "Arisen",
+    "translation": "Surgir, Levantarse"
+  },
+  {
+    "infinitive": "Awake",
+    "simple": "Awoke",
+    "participle": "Awoken",
+    "translation": "Despertarse"
+  },
+  {
+    "infinitive": "Be/ am, are, is",
+    "simple": "Was / Were",
+    "participle": "Been",
+    "translation": "Ser / Estar"
+  },
+  {
+    "infinitive": "Bear",
+    "simple": "Bore",
+    "participle": "Borne / Born",
+    "translation": "Soportar, dar a luz"
+  },
+  {
+    "infinitive": "Beat",
+    "simple": "Beat",
+    "participle": "Beaten",
+    "translation": "Golpear"
+  },
+  {
+    "infinitive": "Become",
+    "simple": "Became",
+    "participle": "Become",
+    "translation": "Llegar a Ser"
+  },
+  {
+    "infinitive": "Begin",
+    "simple": "Began",
+    "participle": "Begun",
+    "translation": "Empezar"
+  },
+  {
+    "infinitive": "Bend",
+    "simple": "Bent",
+    "participle": "Bent",
+    "translation": "Doblar"
+  },
+  {
+    "infinitive": "Bet",
+    "simple": "Bet",
+    "participle": "Bet",
+    "translation": "Apostar"
+  },
+  {
+    "infinitive": "Bind",
+    "simple": "Bound",
+    "participle": "Bound",
+    "translation": "Atar, encuadernar"
+  },
+  {
+    "infinitive": "Bite",
+    "simple": "Bit",
+    "participle": "Bitten",
+    "translation": "Morder"
+  },
+  {
+    "infinitive": "Bleed",
+    "simple": "Bled",
+    "participle": "Bled",
+    "translation": "Sangrar"
+  },
+  {
+    "infinitive": "Blow",
+    "simple": "Blew",
+    "participle": "Blown",
+    "translation": "Soplar"
+  },
+  {
+    "infinitive": "Break",
+    "simple": "Broke",
+    "participle": "Broken",
+    "translation": "Romper"
+  },
+  {
+    "infinitive": "Bring",
+    "simple": "Brought",
+    "participle": "Brought",
+    "translation": "Traer Llevar"
+  },
+  {
+    "infinitive": "Build",
+    "simple": "Built",
+    "participle": "Built",
+    "translation": "Edificar"
+  },
+  {
+    "infinitive": "Burn",
+    "simple": "Burnt / Burned",
+    "participle": "Burnt / Burned",
+    "translation": "Quemar"
+  },
+  {
+    "infinitive": "Burst",
+    "simple": "Burst",
+    "participle": "Burst",
+    "translation": "Reventar"
+  },
+  {
+    "infinitive": "Buy",
+    "simple": "Bought",
+    "participle": "Bought",
+    "translation": "Comprar"
+  },
+  {
+    "infinitive": "Cast",
+    "simple": "Cast",
+    "participle": "Cast",
+    "translation": "Arrojar"
+  },
+  {
+    "infinitive": "Catch",
+    "simple": "Caught",
+    "participle": "Caught",
+    "translation": "Coger"
+  },
+  {
+    "infinitive": "Come",
+    "simple": "Came",
+    "participle": "Come",
+    "translation": "Venir"
+  },
+  {
+    "infinitive": "Cost",
+    "simple": "Cost",
+    "participle": "Cost",
+    "translation": "Costar"
+  },
+  {
+    "infinitive": "Cut",
+    "simple": "Cut",
+    "participle": "Cut",
+    "translation": "Cortar"
+  },
+  {
+    "infinitive": "Choose",
+    "simple": "Chose",
+    "participle": "Chosen",
+    "translation": "Elegir"
+  },
+  {
+    "infinitive": "Dig",
+    "simple": "Dug",
+    "participle": "Dug",
+    "translation": "Cavar"
+  },
+  {
+    "infinitive": "Do (Does)",
+    "simple": "Did",
+    "participle": "Done",
+    "translation": "Hacer"
+  },
+  {
+    "infinitive": "Draw",
+    "simple": "Drew",
+    "participle": "Drawn",
+    "translation": "Dibujar"
+  },
+  {
+    "infinitive": "Drink",
+    "simple": "Drank",
+    "participle": "Drunk",
+    "translation": "Beber"
+  },
+  {
+    "infinitive": "Drive",
+    "simple": "Drove",
+    "participle": "Driven",
+    "translation": "Conducir"
+  },
+  {
+    "infinitive": "Eat",
+    "simple": "Ate",
+    "participle": "Eaten",
+    "translation": "Comer"
+  },
+  {
+    "infinitive": "Fall",
+    "simple": "Fell",
+    "participle": "Fallen",
+    "translation": "Caer"
+  },
+  {
+    "infinitive": "Feed",
+    "simple": "Fed",
+    "participle": "Fed",
+    "translation": "Alimentar"
+  },
+  {
+    "infinitive": "Feel",
+    "simple": "Felt",
+    "participle": "Felt",
+    "translation": "Sentir"
+  },
+  {
+    "infinitive": "Fight",
+    "simple": "Fought",
+    "participle": "Fought",
+    "translation": "Luchar"
+  },
+  {
+    "infinitive": "Find",
+    "simple": "Found",
+    "participle": "Found",
+    "translation": "Encontrar"
+  },
+  {
+    "infinitive": "Fly",
+    "simple": "Flew",
+    "participle": "Flown",
+    "translation": "Volar"
+  },
+  {
+    "infinitive": "Forget",
+    "simple": "Forgot",
+    "participle": "Forgotten",
+    "translation": "Olvidar"
+  },
+  {
+    "infinitive": "Forgive",
+    "simple": "Forgave",
+    "participle": "Forgiven",
+    "translation": "Perdonar"
+  },
+  {
+    "infinitive": "Freeze",
+    "simple": "Froze",
+    "participle": "Frozen",
+    "translation": "Helar"
+  },
+  {
+    "infinitive": "Get",
+    "simple": "Got",
+    "participle": "Got / Gotten",
+    "translation": "Obtener"
+  },
+  {
+    "infinitive": "Give",
+    "simple": "Gave",
+    "participle": "Given",
+    "translation": "Dar"
+  },
+  {
+    "infinitive": "Go (Goes)",
+    "simple": "Went",
+    "participle": "Gone",
+    "translation": "Ir"
+  },
+  {
+    "infinitive": "Grow",
+    "simple": "Grew",
+    "participle": "Grown",
+    "translation": "Crecer"
+  },
+  {
+    "infinitive": "Have",
+    "simple": "Had",
+    "participle": "Had",
+    "translation": "Haber o Tener"
+  },
+  {
+    "infinitive": "Hear",
+    "simple": "Heard",
+    "participle": "Heard",
+    "translation": "Oir"
+  },
+  {
+    "infinitive": "Hide",
+    "simple": "Hid",
+    "participle": "Hidden",
+    "translation": "Ocultar"
+  },
+  {
+    "infinitive": "Hit",
+    "simple": "Hit",
+    "participle": "Hit",
+    "translation": "Golpear"
+  },
+  {
+    "infinitive": "Hold",
+    "simple": "Held",
+    "participle": "Held",
+    "translation": "Agarrar Celebrar"
+  },
+  {
+    "infinitive": "Hurt",
+    "simple": "Hurt",
+    "participle": "Hurt",
+    "translation": "Herir"
+  },
+  {
+    "infinitive": "Keep",
+    "simple": "Kept",
+    "participle": "Kept",
+    "translation": "Conservar"
+  },
+  {
+    "infinitive": "Know",
+    "simple": "Knew",
+    "participle": "Known",
+    "translation": "Saber Conocer"
+  },
+  {
+    "infinitive": "Leave",
+    "simple": "Left",
+    "participle": "Left",
+    "translation": "Dejar"
+  },
+  {
+    "infinitive": "Lend",
+    "simple": "Lent",
+    "participle": "Lent",
+    "translation": "Prestar"
+  },
+  {
+    "infinitive": "Let",
+    "simple": "Let",
+    "participle": "Let",
+    "translation": "Permitir"
+  },
+  {
+    "infinitive": "Lose",
+    "simple": "Lost",
+    "participle": "Lost",
+    "translation": "Perder"
+  },
+  {
+    "infinitive": "Make",
+    "simple": "Made",
+    "participle": "Made",
+    "translation": "Hacer"
+  },
+  {
+    "infinitive": "Meet",
+    "simple": "Met",
+    "participle": "Met",
+    "translation": "Encontrar"
+  },
+  {
+    "infinitive": "Pay",
+    "simple": "Paid",
+    "participle": "Paid",
+    "translation": "Pagar"
+  },
+  {
+    "infinitive": "Put",
+    "simple": "Put",
+    "participle": "Put",
+    "translation": "Poner"
+  },
+  {
+    "infinitive": "Read",
+    "simple": "Read",
+    "participle": "Read",
+    "translation": "Leer"
+  },
+  {
+    "infinitive": "Ride",
+    "simple": "Rode",
+    "participle": "Ridden",
+    "translation": "Montar"
+  },
+  {
+    "infinitive": "Ring",
+    "simple": "Rang",
+    "participle": "Rung",
+    "translation": "Llamar"
+  },
+  {
+    "infinitive": "Run",
+    "simple": "Ran",
+    "participle": "Run",
+    "translation": "Correr"
+  },
+  {
+    "infinitive": "Say",
+    "simple": "Said",
+    "participle": "Said",
+    "translation": "Decir"
+  },
+  {
+    "infinitive": "See",
+    "simple": "Saw",
+    "participle": "Seen",
+    "translation": "Ver"
+  },
+  {
+    "infinitive": "Sell",
+    "simple": "Sold",
+    "participle": "Sold",
+    "translation": "Vender"
+  },
+  {
+    "infinitive": "Send",
+    "simple": "Sent",
+    "participle": "Sent",
+    "translation": "Enviar"
+  },
+  {
+    "infinitive": "Shake",
+    "simple": "Shook",
+    "participle": "Shaken",
+    "translation": "Sacudir"
+  },
+  {
+    "infinitive": "Shine",
+    "simple": "Shone",
+    "participle": "Shone",
+    "translation": "Brillar"
+  },
+  {
+    "infinitive": "Shoot",
+    "simple": "Shot",
+    "participle": "Shot",
+    "translation": "Disparar"
+  },
+  {
+    "infinitive": "Show",
+    "simple": "Showed",
+    "participle": "Shown",
+    "translation": "Mostrar"
+  },
+  {
+    "infinitive": "Shut",
+    "simple": "Shut",
+    "participle": "Shut",
+    "translation": "Cerrar"
+  },
+  {
+    "infinitive": "Sing",
+    "simple": "Sang",
+    "participle": "Sung",
+    "translation": "Cantar"
+  },
+  {
+    "infinitive": "Sit",
+    "simple": "Sat",
+    "participle": "Sat",
+    "translation": "Sentarse"
+  },
+  {
+    "infinitive": "Sleep",
+    "simple": "Slept",
+    "participle": "Slept",
+    "translation": "Dormir"
+  },
+  {
+    "infinitive": "Speak",
+    "simple": "Spoke",
+    "participle": "Spoken",
+    "translation": "Hablar"
+  },
+  {
+    "infinitive": "Spend",
+    "simple": "Spent",
+    "participle": "Spent",
+    "translation": "Gastar"
+  },
+  {
+    "infinitive": "Stand",
+    "simple": "Stood",
+    "participle": "Stood",
+    "translation": "Estar en pie"
+  },
+  {
+    "infinitive": "Swim",
+    "simple": "Swam",
+    "participle": "Swum",
+    "translation": "Nadar"
+  },
+  {
+    "infinitive": "Take",
+    "simple": "Took",
+    "participle": "Taken",
+    "translation": "Coger"
+  },
+  {
+    "infinitive": "Teach",
+    "simple": "Taught",
+    "participle": "Taught",
+    "translation": "Enseñar"
+  },
+  {
+    "infinitive": "Tell",
+    "simple": "Told",
+    "participle": "Told",
+    "translation": "Decir"
+  },
+  {
+    "infinitive": "Think",
+    "simple": "Thought",
+    "participle": "Thought",
+    "translation": "Pensar"
+  },
+  {
+    "infinitive": "Throw",
+    "simple": "Threw",
+    "participle": "Thrown",
+    "translation": "Arrojar Tirar"
+  },
+  {
+    "infinitive": "Understand",
+    "simple": "Understood",
+    "participle": "Understood",
+    "translation": "Entender"
+  },
+  {
+    "infinitive": "Wake",
+    "simple": "Woke",
+    "participle": "Woken",
+    "translation": "Despertarse"
+  },
+  {
+    "infinitive": "Wear",
+    "simple": "Wore",
+    "participle": "Worn",
+    "translation": "Llevar puesto"
+  },
+  {
+    "infinitive": "Win",
+    "simple": "Won",
+    "participle": "Won",
+    "translation": "Ganar"
+  },
+  {
+    "infinitive": "Write",
+    "simple": "Wrote",
+    "participle": "Written",
+    "translation": "Escribir"
+  }
+]
