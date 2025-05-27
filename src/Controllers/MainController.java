@@ -13,8 +13,10 @@ import java.util.ResourceBundle;
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 
+import App.AppVerbos;
 import Model.IrregularVerb;
 import Model.Util;
+import Service.NavigationService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -33,7 +35,7 @@ import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 
 
-public class MainController implements Initializable {
+public class MainController implements Initializable, NavigationService {
 
     @FXML
     private Label lblText;
@@ -106,26 +108,12 @@ public class MainController implements Initializable {
             txtMessage.setText(message);
         } else {
             txtMessage.setText("Enhorabuena , +1 punto");
-            intercambiarPantallas();
+            cambiarPantalla("../resources/MainController.fxml");
         }
 
     }
 
-    @FXML
-    public void intercambiarPantallas() {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../resources/MainController.fxml"));
-            Parent root = loader.load();
 
-            Stage currentStage = (Stage) txtMessage.getScene().getWindow();
-
-            currentStage.setScene(new Scene(root));
-            currentStage.setTitle("Panel de usuarios");
-
-        } catch (Exception e) {
-            // TODO: handle exception
-        }
-    }
 
     @FXML
     public void importarVerbos(ActionEvent event) {
@@ -148,13 +136,15 @@ public class MainController implements Initializable {
                 fileContent.append("\n");
             }            
         } catch (Exception e) {
-            // TODO: handle exception
+            System.out.println(e.getMessage());
         }
 
         String json = fileContent.toString();
         IrregularVerb[]verbos = gson.fromJson(json, IrregularVerb[].class);
 
-        System.out.println(verbos[0]);
+        verbs = List.of(verbos);
+
+        
 
     }
 

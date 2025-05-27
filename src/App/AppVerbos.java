@@ -1,5 +1,7 @@
+package App;
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -9,6 +11,12 @@ public class AppVerbos extends Application{
 
     // Continue aquí 
     // https://github.com/holamellamoyago/IrregularVerbs-Java.git
+    private static Stage stage ; 
+
+    
+
+
+
 
     public static void main(String[] args) {
         launch(args);
@@ -16,13 +24,23 @@ public class AppVerbos extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader parent = new FXMLLoader(getClass().getResource("Resources/MainController.fxml"));
+        stage = primaryStage;
+        FXMLLoader parent = new FXMLLoader(getClass().getResource("../Resources/MainController.fxml"));
         Parent root = parent.load();
         Scene scene = new Scene(root);
 
         primaryStage.setScene(scene);
         primaryStage.show();
     }
+
+    public static Stage getStage() {
+        return stage;
+    }
+
+    public static void setStage(Stage stage) {
+        AppVerbos.stage = stage;
+    }
+
 
     
 }
