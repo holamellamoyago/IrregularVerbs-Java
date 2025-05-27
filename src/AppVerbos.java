@@ -5,7 +5,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class Main extends Application{
+public class AppVerbos extends Application{
 
     // Continue aquí 
     // https://github.com/holamellamoyago/IrregularVerbs-Java.git

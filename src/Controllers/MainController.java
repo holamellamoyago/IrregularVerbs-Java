@@ -1,6 +1,7 @@
 package Controllers;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
@@ -22,11 +23,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.Border;
 import javafx.scene.paint.Paint;
+import javafx.stage.FileChooser;
+import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
+
 
 public class MainController implements Initializable {
 
@@ -47,6 +52,9 @@ public class MainController implements Initializable {
 
     @FXML
     Label txtMessage;
+
+    @FXML
+    MenuItem importarfichero;
 
     List<IrregularVerb> verbs;
     IrregularVerb irVrb;
@@ -117,6 +125,37 @@ public class MainController implements Initializable {
         } catch (Exception e) {
             // TODO: handle exception
         }
+    }
+
+    @FXML
+    public void importarVerbos(ActionEvent event) {
+        FileChooser fileChooser = new FileChooser();
+        StringBuilder fileContent = new StringBuilder();
+        ExtensionFilter filter =  new ExtensionFilter("Debes importarlo en formato JSON", "*.json");
+        Stage stage = (Stage) buttonCheck.getScene().getWindow();
+        Gson gson = new Gson();
+
+        fileChooser.setTitle("Importar JSON...");
+        fileChooser.setInitialDirectory(new File("C:\\ProgramData\\Microsoft\\Windows\\Start Menu"));
+        fileChooser.getExtensionFilters().add(filter);
+
+        File selectedFile = fileChooser.showOpenDialog(stage);
+
+        try (BufferedReader buffer = new BufferedReader(new FileReader(selectedFile))) {
+            String line;
+            while ((line = buffer.readLine()) != null) {
+                fileContent.append(line);
+                fileContent.append("\n");
+            }            
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+
+        String json = fileContent.toString();
+        IrregularVerb[]verbos = gson.fromJson(json, IrregularVerb[].class);
+
+        System.out.println(verbos[0]);
+
     }
 
 }
