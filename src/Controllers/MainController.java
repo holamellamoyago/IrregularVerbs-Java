@@ -34,7 +34,6 @@ import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 
-
 public class MainController implements Initializable, NavigationService {
 
     @FXML
@@ -57,6 +56,15 @@ public class MainController implements Initializable, NavigationService {
 
     @FXML
     MenuItem importarfichero;
+
+    @FXML
+    private Label txtHelpSimple;
+
+    @FXML
+    private Label txtHelpTranslate;
+
+    @FXML
+    private Label txtHelpParticiple;
 
     List<IrregularVerb> verbs;
     IrregularVerb irVrb;
@@ -86,6 +94,8 @@ public class MainController implements Initializable, NavigationService {
         } else {
             txtFieldSimple.setStyle("-fx-background-color:red;");
             message += "simple ";
+            txtHelpSimple.setText(mostrarAyuda(irVrb.getSimple()));
+
         }
 
         if (txtFieldParticiiple.getText().toLowerCase().equals(irVrb.getParticiple().toLowerCase())) {
@@ -94,6 +104,8 @@ public class MainController implements Initializable, NavigationService {
         } else {
             txtFieldParticiiple.setStyle("-fx-background-color:red;");
             message += "participle ";
+            txtFieldParticiiple.setText(mostrarAyuda(irVrb.getParticiple()));
+            // txtHelpParticiple.setText(mostrarAyuda(txtFieldParticiiple.getText()));
         }
 
         if (txtFieldTraduccion.getText().toLowerCase().equals(irVrb.getTranslation().toLowerCase())) {
@@ -102,6 +114,8 @@ public class MainController implements Initializable, NavigationService {
         } else {
             txtFieldTraduccion.setStyle("-fx-background-color:red;");
             message += "traducción ";
+            txtHelpTranslate.setText(mostrarAyuda(irVrb.getTranslation()));
+            // txtHelpTranslate.setText(mostrarAyuda(txtFieldParticiiple.getText()));
         }
 
         if (contador < 3) {
@@ -113,13 +127,41 @@ public class MainController implements Initializable, NavigationService {
 
     }
 
+    private String mostrarAyuda(String verbo) {
 
+        char[] letras = new char[verbo.length()];
+
+        for (int i = 0; i < letras.length; i++) {
+            letras[i] = '-';
+        }
+
+        switch (verbo.length()) {
+            case 1, 2, 3, 4: {
+                letras[0] = verbo.charAt(0);
+                letras[letras.length - 1] = verbo.charAt(verbo.length() - 1);
+                break;
+            }
+            default: {
+                letras[0] = verbo.charAt(0);
+                letras[letras.length - 1] = verbo.charAt(verbo.length() - 1);
+                letras[(letras.length - 1) / 2] = verbo.charAt((verbo.length() - 1) / 2);
+                break;
+            }
+        }
+
+        verbo = "";
+        for (char c : letras) {
+            verbo += c;
+        }
+
+        return verbo;
+    }
 
     @FXML
     public void importarVerbos(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
         StringBuilder fileContent = new StringBuilder();
-        ExtensionFilter filter =  new ExtensionFilter("Debes importarlo en formato JSON", "*.json");
+        ExtensionFilter filter = new ExtensionFilter("Debes importarlo en formato JSON", "*.json");
         Stage stage = (Stage) buttonCheck.getScene().getWindow();
         Gson gson = new Gson();
 
@@ -134,17 +176,15 @@ public class MainController implements Initializable, NavigationService {
             while ((line = buffer.readLine()) != null) {
                 fileContent.append(line);
                 fileContent.append("\n");
-            }            
+            }
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
 
         String json = fileContent.toString();
-        IrregularVerb[]verbos = gson.fromJson(json, IrregularVerb[].class);
+        IrregularVerb[] verbos = gson.fromJson(json, IrregularVerb[].class);
 
         verbs = List.of(verbos);
-
-        
 
     }
 

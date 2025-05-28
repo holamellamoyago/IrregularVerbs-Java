@@ -43,7 +43,7 @@
                         <Label fx:id="lblText" text="Verbo" />
                      </children>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                      <children>
                         <Label text="Past Simple">
                            <font>
@@ -51,9 +51,10 @@
                            </font>
                         </Label>
                         <TextField fx:id="txtFieldSimple" />
+                        <Label fx:id="txtHelpSimple" text="a" />
                      </children>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                      <children>
                         <Label text="Participle">
                            <font>
@@ -61,9 +62,10 @@
                            </font>
                         </Label>
                         <TextField fx:id="txtFieldParticiiple" />
+                        <Label fx:id="txtHelpParticiple" />
                      </children>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                      <children>
                         <Label text="Traducción">
                            <font>
@@ -71,6 +73,7 @@
                            </font>
                         </Label>
                         <TextField fx:id="txtFieldTraduccion" />
+                        <Label fx:id="txtHelpTranslate" />
                      </children>
                   </VBox>
                </children>

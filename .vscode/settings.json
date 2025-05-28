@@ -1,7 +1,10 @@
 {
-    "java.project.sourcePaths": ["src"],
+    "java.project.sourcePaths": [
+        "src"
+    ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
-        "lib/**/*.jar"
+        "c:\\Users\\yago8\\Documents\\AA Programación\\IrregularVerbs\\lib\\gson-2.10.1.jar",
+        "lib/bcrypt-0.10.2.jar"
     ]
 }

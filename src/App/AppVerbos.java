@@ -1,5 +1,6 @@
 package App;
 
+import bd.Conexion;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,10 +13,6 @@ public class AppVerbos extends Application{
     // Continue aquí 
     // https://github.com/holamellamoyago/IrregularVerbs-Java.git
     private static Stage stage ; 
-
-    
-
-
 
 
     public static void main(String[] args) {
@@ -31,6 +28,7 @@ public class AppVerbos extends Application{
 
         primaryStage.setScene(scene);
         primaryStage.show();
+        Conexion.conectar();
     }
 
     public static Stage getStage() {
