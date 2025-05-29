@@ -27,10 +27,9 @@ public class IrregularVerb {
 
     public static IrregularVerb getVb(List<IrregularVerb> l) {
 
+        int rdm = new Random().nextInt(l.size());
+        return l.get(rdm);
 
-            int rdm = new Random().nextInt(l.size());
-            return l.get(rdm);
-        
     }
 
     public String getInfinitive() {
