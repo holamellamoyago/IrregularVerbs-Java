@@ -28,7 +28,7 @@ public class AppVerbos extends Application{
 
         primaryStage.setScene(scene);
         primaryStage.show();
-        Conexion.conectar();
+        // Conexion.conectar();
     }
 
     public static Stage getStage() {

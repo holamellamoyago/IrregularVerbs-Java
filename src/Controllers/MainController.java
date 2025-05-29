@@ -88,7 +88,7 @@ public class MainController implements Initializable, NavigationService {
 
         System.out.println(e.getSource().toString());
 
-        if (txtFieldSimple.getText().toLowerCase().equals(irVrb.getSimple().toLowerCase())) {
+        if (txtFieldSimple.getText().toLowerCase().contains(irVrb.getSimple().toLowerCase())) {
             txtFieldSimple.setStyle("-fx-background-color:green;");
             contador++;
         } else {
@@ -98,17 +98,17 @@ public class MainController implements Initializable, NavigationService {
 
         }
 
-        if (txtFieldParticiiple.getText().toLowerCase().equals(irVrb.getParticiple().toLowerCase())) {
+        if (txtFieldParticiiple.getText().toLowerCase().contains(irVrb.getParticiple().toLowerCase())) {
             txtFieldParticiiple.setStyle("-fx-background-color:green;");
             contador++;
         } else {
             txtFieldParticiiple.setStyle("-fx-background-color:red;");
             message += "participle ";
-            txtFieldParticiiple.setText(mostrarAyuda(irVrb.getParticiple()));
+            txtHelpParticiple.setText(mostrarAyuda(irVrb.getParticiple()));
             // txtHelpParticiple.setText(mostrarAyuda(txtFieldParticiiple.getText()));
         }
 
-        if (txtFieldTraduccion.getText().toLowerCase().equals(irVrb.getTranslation().toLowerCase())) {
+        if (txtFieldTraduccion.getText().toLowerCase().contains(irVrb.getTranslation().toLowerCase())) {
             txtFieldTraduccion.setStyle("-fx-background-color:green;");
             contador++;
         } else {

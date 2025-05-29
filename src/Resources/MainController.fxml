@@ -51,7 +51,7 @@
                            </font>
                         </Label>
                         <TextField fx:id="txtFieldSimple" />
-                        <Label fx:id="txtHelpSimple" text="a" />
+                        <Label fx:id="txtHelpSimple" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
