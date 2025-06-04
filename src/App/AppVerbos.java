@@ -1,5 +1,6 @@
 package App;
 
+
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -26,6 +27,8 @@ public class AppVerbos extends Application{
         Scene scene = new Scene(root);
 
         primaryStage.setScene(scene);
+        primaryStage.setTitle("Learn irregular verbs");
+        primaryStage.setResizable(false);
         primaryStage.show();
         // Conexion.conectar();
     }

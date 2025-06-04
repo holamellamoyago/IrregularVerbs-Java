@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 import java.util.Random;
 import java.util.ResourceBundle;
 
@@ -66,13 +68,15 @@ public class MainController implements Initializable, NavigationService {
     @FXML
     private Label txtHelpParticiple;
 
-    List<IrregularVerb> verbs;
-    IrregularVerb irVrb;
+    private List<IrregularVerb> verbs;
+    private IrregularVerb irVrb;
+    private Set<IrregularVerb> verbosMostrados = new TreeSet<>();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         verbs = Util.readVerbs();
         if (verbs != null && !verbs.isEmpty()) {
+
             irVrb = IrregularVerb.getVb(verbs);
 
             lblText.setText(irVrb.getInfinitive());
@@ -86,9 +90,7 @@ public class MainController implements Initializable, NavigationService {
 
         String message = "Corrige tu error: ";
 
-        System.out.println(e.getSource().toString());
-
-        if (txtFieldSimple.getText().toLowerCase().contains(irVrb.getSimple().toLowerCase())) {
+        if (verificarCampo(txtFieldSimple.getText(), irVrb.getSimple())) {
             txtFieldSimple.setStyle("-fx-background-color:green;");
             contador++;
         } else {
@@ -98,7 +100,7 @@ public class MainController implements Initializable, NavigationService {
 
         }
 
-        if (txtFieldParticiiple.getText().toLowerCase().contains(irVrb.getParticiple().toLowerCase())) {
+        if (verificarCampo(txtFieldParticiiple.getText(), irVrb.getParticiple())) {
             txtFieldParticiiple.setStyle("-fx-background-color:green;");
             contador++;
         } else {
@@ -108,7 +110,7 @@ public class MainController implements Initializable, NavigationService {
             // txtHelpParticiple.setText(mostrarAyuda(txtFieldParticiiple.getText()));
         }
 
-        if (txtFieldTraduccion.getText().toLowerCase().contains(irVrb.getTranslation().toLowerCase())) {
+        if (verificarTraduccion(txtFieldTraduccion.getText(), irVrb.getTranslation())) {
             txtFieldTraduccion.setStyle("-fx-background-color:green;");
             contador++;
         } else {
@@ -121,10 +123,73 @@ public class MainController implements Initializable, NavigationService {
         if (contador < 3) {
             txtMessage.setText(message);
         } else {
-            txtMessage.setText("Enhorabuena , +1 punto");
-            cambiarPantalla("../resources/MainController.fxml");
+            generarNuevaPartida();
         }
 
+    }
+
+    private void generarNuevaPartida() {
+        verbosMostrados.add(irVrb);
+        txtMessage.setText("Enhorabuena , +1 punto");
+
+        txtFieldSimple.setStyle("-fx-background-color:white;");
+        txtFieldParticiiple.setStyle("-fx-background-color:white;");
+        txtFieldTraduccion.setStyle("-fx-background-color:white;");
+
+        txtFieldSimple.setText("");
+        txtFieldParticiiple.setText("");
+        txtFieldTraduccion.setText("");
+
+        txtHelpSimple.setText("");
+        txtHelpParticiple.setText("");
+        txtHelpTranslate.setText("");
+        
+
+        do {
+            irVrb = IrregularVerb.getVb(verbs);
+            lblText.setText(irVrb.getInfinitive());
+        } while (verbosMostrados.contains(irVrb));
+
+        System.out.println(verbosMostrados);
+    }
+
+    private boolean verificarCampo(String escrito, String correcto) {
+        // Las paso a minúsculas
+        escrito = escrito.toLowerCase();
+        correcto = correcto.toLowerCase();
+
+        if (escrito.equals(correcto))
+            return true;
+        else
+            return false;
+    }
+
+    private boolean verificarTraduccion(String escrito, String correcto) {
+        boolean iguales = false;
+        int contador = 0;
+
+        // Las paso a minúsculas
+        escrito = escrito.toLowerCase();
+        correcto = correcto.toLowerCase();
+
+        // Hago un array de cada una para después comparar,
+        // porque hay diferentes soluciones a la correcta
+        String[] arrayCorrecto = correcto.split(" ");
+        String[] arrayEscrito = escrito.split(" ");
+
+        // Antes de una solución mas díficil si esto es equals que ya devuelva
+        if (escrito.equals(correcto))
+            return true;
+
+        // Voy a hacer que si detecta ya una palabra (Puede ser una frase) que ya la de
+        // por válida
+        for (String e : arrayEscrito) {
+            for (String c : arrayCorrecto) {
+                if (e.equals(c))
+                    iguales = true;
+            }
+        }
+        return iguales;
     }
 
     private String mostrarAyuda(String verbo) {

@@ -10,7 +10,7 @@ import java.util.Random;
 
 import com.google.gson.Gson;
 
-public class IrregularVerb {
+public class IrregularVerb implements Comparable<IrregularVerb> {
     private String infinitive, simple, participle, translation;
 
     public IrregularVerb(String infinitive, String simple, String participle, String translation) {
@@ -62,6 +62,12 @@ public class IrregularVerb {
 
     public void setTranslation(String translation) {
         this.translation = translation;
+    }
+
+    @Override
+    public int compareTo(IrregularVerb o) {
+        return infinitive.compareTo(o.infinitive);
+        
     }
 
 }
