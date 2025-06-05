@@ -7,6 +7,7 @@
         "c:\\Users\\yago8\\Documents\\AA Programación\\IrregularVerbs\\lib\\gson-2.10.1.jar",
         "lib/bcrypt-0.10.2.jar",
         "lib/gson-2.10.1.jar",
-        "lib/mysql-connector-j-9.1.0.jar"
+        "lib/mysql-connector-j-9.1.0.jar",
+        "lib/mysql-connector-j-9.3.0.jar"
     ]
 }

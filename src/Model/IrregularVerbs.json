@@ -20,7 +20,7 @@
   {
     "infinitive": "Bear",
     "simple": "Bore",
-    "participle": "Borne / Born",
+    "participle": "Born",
     "translation": "Soportar, dar a luz"
   },
   {
@@ -117,7 +117,7 @@
     "infinitive": "Cast",
     "simple": "Cast",
     "participle": "Cast",
-    "translation": "Arrojar"
+    "translation": "Arrojar tirar"
   },
   {
     "infinitive": "Catch",
@@ -243,7 +243,7 @@
     "infinitive": "Get",
     "simple": "Got",
     "participle": "Got / Gotten",
-    "translation": "Obtener"
+    "translation": "Obtener coger"
   },
   {
     "infinitive": "Give",
@@ -525,7 +525,7 @@
     "infinitive": "Wear",
     "simple": "Wore",
     "participle": "Worn",
-    "translation": "Llevar puesto"
+    "translation": "Llevar puesto vestir"
   },
   {
     "infinitive": "Win",
