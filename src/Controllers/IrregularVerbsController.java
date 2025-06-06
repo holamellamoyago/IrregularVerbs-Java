@@ -36,7 +36,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 
-public class MainController implements Initializable, NavigationService {
+public class IrregularVerbsController implements Initializable, NavigationService {
 
     @FXML
     private Label lblText;
@@ -84,8 +84,6 @@ public class MainController implements Initializable, NavigationService {
     }
 
     public void checkVerb(ActionEvent e) {
-        System.out.println("Escrito: " + txtFieldSimple.getText());
-        System.out.println("Correcto: " + irVrb.getSimple());
         int contador = 0;
 
         String message = "Corrige tu error: ";
@@ -143,14 +141,18 @@ public class MainController implements Initializable, NavigationService {
         txtHelpSimple.setText("");
         txtHelpParticiple.setText("");
         txtHelpTranslate.setText("");
-        
 
         do {
             irVrb = IrregularVerb.getVb(verbs);
             lblText.setText(irVrb.getInfinitive());
         } while (verbosMostrados.contains(irVrb));
 
-        System.out.println(verbosMostrados);
+        ArrayList<IrregularVerb> verbosNoMostrados = new ArrayList<>();
+        verbosNoMostrados.addAll(verbs);
+        verbosNoMostrados.removeAll(verbosMostrados);
+        
+        System.out.println("Verbos acertados: " + verbosMostrados);
+        System.out.println("Verbos restantes: " + verbosNoMostrados);
     }
 
     private boolean verificarCampo(String escrito, String correcto) {
