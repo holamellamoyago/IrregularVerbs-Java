@@ -4,12 +4,11 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MenuPrincipalController">
    <center>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="25.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btnVerbs" mnemonicParsing="false" text="Irregular Verbs" />
+            <Button fx:id="btnVerbs" mnemonicParsing="false" onAction="#changeScreen" text="Irregular Verbs" />
             <Button fx:id="btnVocabulary" mnemonicParsing="false" text="Vocabulary B1" />
          </children>
       </HBox>

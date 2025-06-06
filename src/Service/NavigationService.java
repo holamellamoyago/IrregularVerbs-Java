@@ -7,9 +7,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public interface NavigationService {
-    public  default void cambiarPantalla(String fxml) {
+    public default void cambiarPantalla(String fxml) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Resources/" + fxml));
             Parent root = loader.load();
 
             AppVerbos.getStage().setScene(new Scene(root));
