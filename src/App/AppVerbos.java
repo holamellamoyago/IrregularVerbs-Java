@@ -21,7 +21,7 @@ public class AppVerbos extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
-        FXMLLoader parent = new FXMLLoader(getClass().getResource("../Resources/MenuPrincipalScreen.fxml"));
+        FXMLLoader parent = new FXMLLoader(getClass().getResource("../Resources/LoginScreen.fxml"));
         Parent root = parent.load();
         Scene scene = new Scene(root);
 

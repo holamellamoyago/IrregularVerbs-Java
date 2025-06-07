@@ -9,7 +9,7 @@
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="25.0" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="btnVerbs" mnemonicParsing="false" onAction="#changeScreen" text="Irregular Verbs" />
-            <Button fx:id="btnVocabulary" mnemonicParsing="false" text="Vocabulary B1" />
+            <Button fx:id="btnVocabulary" mnemonicParsing="false" onAction="#changeScreen" text="Vocabulary B1" />
          </children>
       </HBox>
    </center>
