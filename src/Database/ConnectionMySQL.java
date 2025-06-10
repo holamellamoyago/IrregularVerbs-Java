@@ -14,29 +14,10 @@ public class ConnectionMySQL {
     private static final String url = "jdbc:mysql://localhost/learnenglish";
     public static Connection conexionDB;
 
-    // public static void main(String[] args) {
-    //     try {
-    //         conexionDB = DriverManager.getConnection(url, user, pwd);
-    //         String query = "select * from users";
-    //         PreparedStatement querySelect = conexionDB.prepareStatement(query);
-    //         ResultSet resultado = querySelect.executeQuery();
-
-    //         System.out.println(resultado.toString());
-
-    //         while (resultado.next()) {
-    //             String nombre = resultado.getString("name");
-    //             System.out.println(nombre);
-    //         }
-
-    //     } catch (Exception e) {
-    //         System.out.println("Error en la conexión");
-    //         e.printStackTrace();
-    //     }
-    // }
-
     public static boolean initiateDatabase(){
         try {
             conexionDB = DriverManager.getConnection(url, user, pwd);
+            System.out.println("DB Connected");
             return true;
         } catch (SQLException e) {
             e.printStackTrace();
